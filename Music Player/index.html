@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Melody Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="player">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div>
+                <span>NOW PLAYING</span>
+                <h1>🎵 Melody</h1>
+            </div>
+
+            <button id="menuBtn">☰</button>
+
+        </div>
+
+
+        <!-- Album -->
+        <div class="album">
+
+            <img id="cover"
+                 src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=700&q=80"
+                 alt="Album Cover">
+
+        </div>
+
+
+        <!-- Song Info -->
+        <div class="song-info">
+
+            <h2 id="title">
+                Dream Melody
+            </h2>
+
+            <p id="artist">
+                Aria Music
+            </p>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="progress-area">
+
+            <span id="currentTime">0:00</span>
+
+            <input type="range"
+                   id="progress"
+                   min="0"
+                   max="100"
+                   value="0">
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="prev">⏮</button>
+
+            <button id="play"
+                    class="play-btn">
+                ▶
+            </button>
+
+            <button id="next">⏭</button>
+
+        </div>
+
+
+        <!-- Volume -->
+        <div class="volume">
+
+            <span>🔊</span>
+
+            <input type="range"
+                   id="volume"
+                   min="0"
+                   max="1"
+                   step="0.01"
+                   value="0.7">
+
+        </div>
+
+
+        <!-- Autoplay -->
+        <label class="autoplay">
+
+            <input type="checkbox"
+                   id="autoplay">
+
+            Autoplay next song
+
+        </label>
+
+
+        <!-- Playlist -->
+        <div class="playlist">
+
+            <h3>🎶 My Playlist</h3>
+
+            <div class="song active"
+                 data-index="0">
+
+                <span>01</span>
+
+                <div>
+                    <b>Dream Melody</b>
+                    <small>Aria Music</small>
+                </div>
+
+            </div>
+
+
+            <div class="song"
+                 data-index="1">
+
+                <span>02</span>
+
+                <div>
+                    <b>Ocean Waves</b>
+                    <small>Blue Sky</small>
+                </div>
+
+            </div>
+
+
+            <div class="song"
+                 data-index="2">
+
+                <span>03</span>
+
+                <div>
+                    <b>Night Drive</b>
+                    <small>Neon Beats</small>
+                </div>
+
+            </div>
+
+
+            <div class="song"
+                 data-index="3">
+
+                <span>04</span>
+
+                <div>
+                    <b>Peaceful Soul</b>
+                    <small>Relax Studio</small>
+                </div>
+
+            </div>
+
+
+            <div class="song"
+                 data-index="4">
+
+                <span>05</span>
+
+                <div>
+                    <b>Summer Vibes</b>
+                    <small>Sunny Beats</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <audio id="audio"></audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
